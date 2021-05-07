@@ -2,13 +2,12 @@ using UnityEngine;
 
 namespace Lessons
 {
-    public class Test : MonoBehaviour
+    public class RotateObject : MonoBehaviour
     {
-        [SerializeField] private float _speed = 10f;
-
+        [SerializeField] RotateSettings _rotateSettings;
         private void Update()
         {
-            transform.Rotate(Vector3.up, _speed*Time.deltaTime);
+            transform.Rotate(Vector3.up, _rotateSettings.Speed*Time.deltaTime);
         }
     }
 }
